@@ -5,6 +5,7 @@
  */
 package my.coffe;
 import org.jdatepicker.JDatePicker;
+import my.utility.DBConnection;
 /**
  *
  * @author Elev
@@ -72,6 +73,11 @@ public class CoffeGUI extends javax.swing.JFrame {
         jLabel3.setText("ID:");
 
         jButton1.setText("Add User");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Open Picture");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -283,6 +289,11 @@ public class CoffeGUI extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        DBConnection con = new DBConnection(); 
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
